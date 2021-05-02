@@ -1,6 +1,5 @@
 # MegaGamesCompilationPicoAdafruit
 
-# MEGA_games_compilation_for_Pico
 Addapted MEGA games compilation from https://www.tinyjoypad.com/esp8285
 
 Much better performance with Adafruit SSD1306 library for SPI-OLED
