@@ -1,4 +1,4 @@
-uint16_t FIRMWARE_VERSION=17;
+uint16_t FIRMWARE_VERSION=1016;
 //    >>>>>  MEGA COMPILATION 0015 for ESP8266/ESP8285  GPL v3 <<<<
 //                    >>>>>  MEGA Tiny Joypad  <<<<
 //                   Programmer: Daniel C 2019-2020
@@ -23,8 +23,9 @@ uint16_t FIRMWARE_VERSION=17;
 //                  Contact EMAIL: tscha70@gmail.com
 //
 // >>> Adaption for Raspberry Pi Pico (RP2040) at 133 Mhz <<<
-// by: Roger Buehler May/2021
+// By: Roger Buehler, May/2021
 // Contact EMAIL: tscha70@gmail.com
+// Code: https://github.com/tscha70/MegaGamesCompilationPicoAdafruit
 // 
 // ACTUAL GAME LIST
 //  1-Tiny Gilbert (Electro L.I.B)
@@ -40,8 +41,10 @@ uint16_t FIRMWARE_VERSION=17;
 // 11-Tiny Plaque (Electro L.I.B)
 // 12-Tiny DDug (Electro L.I.B)
 // 13-Tiny Missile (Electro L.I.B)
-// 14-Tiny Lander by (c)Roger Buehler 2020 GPLv3  https://github.com/tscha70/  Contact EMAIL: tscha70@gmail.com
-// 15-Tiny Morpion (Electro L.I.B)
+// 14-Tiny Morpion (Electro L.I.B)
+// 15-Tiny Pipe (Electro L.I.B)
+// 16-Tiny Lander by (c)Roger Buehler 2020 GPLv3  https://github.com/tscha70/  Contact EMAIL: tscha70@gmail.com
+
 
 //ACTUAL TOOLS
 //  1-SOUND On/Off    => Access by std MENU joystick Down (if you write permanently your choice, push button for 3 sec)
@@ -74,12 +77,13 @@ uint16_t FIRMWARE_VERSION=17;
 #include "DATA/TINYBERT/Tiny-bert-ESP.h"
 #include "DATA/TINYTRIS/tiny-tris-ESP.h"
 #include "DATA/TINYLANDER/tiny-lander-ESP.h" //by (c)Roger Buehler 2020 GPLv3  https://github.com/tscha70/  Contact EMAIL: tscha70@gmail.com
+#include "DATA/TINYPIPE/Tiny-Pipe-ESP.h"
 
 #define FLUID (1.2) //1.3 80mhz
 #define FLUID_SETUP (1.1) //1.3 80mhz
 #define Frame_Rate 12 //30 80 mhz
 #define Frame_Rate_FADE 40 //30 80 mhz
-#define MAX_VIGNETTE 14// 14 for 15 games
+#define MAX_VIGNETTE 15// 15 for 16 games
 
 //VAR SLIDE
 uint8_t FADE=8;//0 a 8 fix
@@ -164,8 +168,9 @@ case (9):loop_TTRIS();break;
 case (10):loop_TPLAQUE();break;
 case (11):loop_TDDUG();break;
 case (12):loop_TMISSILE();break;
-case (13):loop_TLANDER();break;
-case (14):loop_TMORPION();break;
+case (13):loop_TMORPION();break;
+case (14):loop_TPIPE();break;
+case (15):loop_TLANDER();break;
 default:goto CANCEL;break;
 }
 CANCEL:;

@@ -1,3 +1,8 @@
+// Adapter class for the OLED-display to work with RPi Pico
+// adapter to enable compatibility between ESP8266/ESP32 and RPi Pico
+// Programmer: Roger Buehler, tscha70@gmail.com, 2012/May/14
+// Code: https://github.com/tscha70/MegaGamesCompilationPicoAdafruit
+
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
@@ -51,7 +56,7 @@ class DisplayEmulator
   private:
     uint8_t _bitmap[BUFFER_LENGTH];
 
-    // Bibsi Babsi Algo:
+    // Bibsi Babsi Algo: (this method converts the vertical bitmap into horizontal bitmap)
     void _convertVerticalToHorizontalBitmap()
     {
       const uint8_t COLS = PIXELWIDTH / 8;
