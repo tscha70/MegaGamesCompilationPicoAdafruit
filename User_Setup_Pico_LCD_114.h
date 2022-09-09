@@ -34,7 +34,9 @@
 
 
 #define TFT_SPI_PORT 1
-#define SPI_FREQUENCY  135000000
+
+// it just so happens that the ST7789VW write cycle time is the same as the rp2040 max clock
+#define SPI_FREQUENCY  62500000
 //#define SPI_FREQUENCY  40000000
 
 #define SPI_READ_FREQUENCY  20000000
