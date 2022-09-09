@@ -30,9 +30,6 @@
 #include <Arduino.h>
 #include <avr/pgmspace.h>
 
-#define SDA_ 4 //SDA
-#define SCL_ 5 //SCL
-//SSD1306  display(0x3c,SDA_,SCL_);//pin D1 and D2 on ESP8266 / ESP8285
 // display object to wrap the required functions/methods
 DisplayEmulator display;
 
@@ -64,12 +61,12 @@ void myDelayus(uint16_t del) {
   }
 }
 
-#define PIN_ 10
-#define PIN_START_BUTTON 11
-#define PIN_RIGHT_BUTTON 12
-#define PIN_DOWN_BUTTON 14
-#define PIN_LEFT_BUTTON 13
-#define PIN_UP_BUTTON 15
+#define PIN_             SCREEN_PIN_SOUND
+#define PIN_START_BUTTON SCEEN_BUTTON_START
+#define PIN_RIGHT_BUTTON SCREEN_BUTTON_RIGHT
+#define PIN_DOWN_BUTTON  SCREEN_BUTTON_DOWN
+#define PIN_LEFT_BUTTON  SCREEN_BUTTON_LEFT
+#define PIN_UP_BUTTON    SCREEN_BUTTON_UP
 
 #define TINYJOYPAD_LEFT  (digitalRead(PIN_LEFT_BUTTON))
 #define TINYJOYPAD_RIGHT (digitalRead(PIN_RIGHT_BUTTON))
