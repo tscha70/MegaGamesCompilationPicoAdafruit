@@ -57,9 +57,10 @@ uint16_t FIRMWARE_VERSION=1016;
 //Programmer = AVRISP mkii
 
 //#include <ESP8266WiFi.h>
-#include <Wire.h>  
-//#include "SSD1306.h" 
-#include "display.h"
+#include <EEPROM.h>
+// pick the display.h for your platform
+//#include "display.h"
+#include "display_tft_espi.h"
 #include "MENU_ESP.h"
 #include "TESTMOD/JOY_TESTER_ESP.h"
 #include "DATA/TINYMORPION/Tiny-Morpion-ESP.h"
