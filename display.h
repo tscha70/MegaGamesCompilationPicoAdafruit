@@ -8,6 +8,14 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
+// move the hardware settings to one place
+#define SCREEN_PIN_SOUND    10
+#define SCEEN_BUTTON_START  11
+#define SCREEN_BUTTON_RIGHT 12
+#define SCREEN_BUTTON_DOWN  14
+#define SCREEN_BUTTON_LEFT  13
+#define SCREEN_BUTTON_UP    15
+
 #define BUFFER_LENGTH 1024
 #define PIXELWIDTH 128
 
